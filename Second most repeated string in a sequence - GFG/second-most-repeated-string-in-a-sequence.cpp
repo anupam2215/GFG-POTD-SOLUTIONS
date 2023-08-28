@@ -25,7 +25,7 @@ class Solution
          
          string ans= "";
          for(auto it:mx){
-             if(it.second >smx && it.second<maxy){
+             if(it.second > smx && it.second<maxy){
                  ans=it.first;
                  smx=max(smx,it.second);
              }
