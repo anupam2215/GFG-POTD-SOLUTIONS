@@ -13,11 +13,11 @@ public:
 	int isPalindrome(string S)
 	{
 	    // Your code goes here
-	    int j=S.size()-1;
+	    int lulli =S.size()-1;
 	    
-	    for(int i=0; i<j ;i++){
-	        if(S[i]==S[j]){
-	             j--;
+	    for(int loda=0; loda<lulli ;loda++){
+	        if(S[loda]==S[lulli]){
+	             lulli--;
 	            
 	        }
 	        else{
