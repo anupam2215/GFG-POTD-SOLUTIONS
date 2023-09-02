@@ -15,7 +15,7 @@ public:
 	    // Your code goes here
 	    int j=S.size()-1;
 	    
-	    for(int i=0; i<S.size() ;i++){
+	    for(int i=0; i<j ;i++){
 	        if(S[i]==S[j]){
 	             j--;
 	            
