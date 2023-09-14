@@ -9,22 +9,22 @@ using namespace std;
 
 // } Driver Code Ends
 //User function Template for C++
+int i=0;
 class Solution
 {
     public:
-    string reverseWord(string str)
+    string reverseWord(string s)
     {
         // Your code goes here
-        int i=0;
-        int n= str.size()-1;
+        
+        int n=s.size();
+       for(int i=0,j=n-1;i<j;i++,j--)
+            swap(s[i],s[j]);
         
         
-        while(i<=n){
-            swap(str[i],str[n]);
-            i++;
-            n--;
-        }
-        return str;
+        return s;
+        
+        
     }
 };
 
