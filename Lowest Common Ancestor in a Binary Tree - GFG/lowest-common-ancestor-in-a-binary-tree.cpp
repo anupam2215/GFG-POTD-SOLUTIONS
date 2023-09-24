@@ -44,27 +44,26 @@ class Solution
        if(root==NULL){
            return NULL;
        }
+       
        if(root->data==n1 || root->data==n2){
            return root;
        }
        
-       Node* leftans=lca(root->left , n1 , n2);
-       Node* rightans=lca(root->right , n1 , n2);
+       Node* leftAns=lca(root->left,n1,n2);
+       Node* rightAns=lca(root->right,n1,n2);
        
-       if(leftans!=NULL &&rightans !=NULL){
+       if(leftAns!=NULL && rightAns!=NULL){
            return root;
        }
        
-       else if(leftans!=NULL && rightans==NULL){
-           return leftans;
+       else if(leftAns!=NULL || rightAns==NULL){
+           return leftAns;
        }
-       else if(leftans==NULL && rightans!=NULL){
-           return rightans;
+       
+       else if(leftAns==NULL || rightAns==NULL){
+           return rightAns;
        }
-       else
-        return NULL;
-       
-       
+       else return NULL;
     }
 };
 
