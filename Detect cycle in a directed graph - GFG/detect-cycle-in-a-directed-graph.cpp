@@ -4,38 +4,39 @@ using namespace std;
 
 // } Driver Code Ends
 class Solution {
-  public:
-  bool solve(int src , vector<int> &vis , vector<int> &order , vector<int> adj[]){
-      vis[src]=1;
-      order[src]=1;
-      
-      for(auto x : adj[src]){
-          if(!vis[x]){
-              bool conf =solve(x,vis,order,adj);
-              if(conf==true)
-                return true;
-          }
-          else if(order[x])  return true;
-      }
-      order[src]=0;
-      return false;
-  }
-    // Function to detect cycle in a directed graph.
-    bool isCyclic(int V, vector<int> adj[]) {
-        // code here
-        vector<int> vis(V,0);
-        vector<int> order(V,0);
-        
-        for(int i=0;i<V;i++){
-            if(!vis[i]){
-                bool c =solve(i,vis,order,adj);
-                if(c==true){
+   private:
+        bool dfscheck(int node , vector<int> adj[] , int vis[] , int pathvis[]){
+            vis[node] =1;
+            pathvis[node]=1;
+            //traverse adjacent node
+            for(auto it:adj[node] ){
+                //when the node is not visited
+                if(!vis[it]){
+                    if(dfscheck(it , adj , vis, pathvis)==true)
+                        return true;
+                }
+                else if(pathvis[it]){
                     return true;
                 }
             }
-           
+            
+            pathvis[node]=0;
+            return false;
+        }      
+  public:
+    // Function to detect cycle in a directed graph.
+    bool isCyclic(int V, vector<int> adj[]) {
+        // code here
+        
+        int vis[V]={0};
+        int pathvis[V]={0};
+        
+        for(int i=0;i<V;i++){
+            if(!vis[i]){
+                if(dfscheck(i,adj,vis,pathvis)==true) return true;
+            }
         }
-         return false;
+        return false;
     }
 };
 
