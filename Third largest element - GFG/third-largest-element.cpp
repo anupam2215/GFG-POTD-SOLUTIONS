@@ -9,8 +9,8 @@ class Solution{
     {
          //Your code here
         int first=a[0];
-        int second=INT_MIN;
-        int third=INT_MIN;
+        int second=0;
+        int third=0;
          
         for(int i=1;i<n;i++){
             if(a[i]>first){
