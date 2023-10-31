@@ -28,11 +28,14 @@ int main()
 
 
 //User function Template for C++
-#include <algorithm>
+
 void rotate(int arr[], int n)
 {
     int i=0;
-    reverse(arr+i, arr+n);
-    i++;
-    reverse(arr+1,arr+n);
+    int j=n-1;
+    
+    while(i<j){
+        swap(arr[i],arr[j]);
+        i++;
+    }
 }
