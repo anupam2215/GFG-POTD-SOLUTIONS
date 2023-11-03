@@ -30,6 +30,7 @@ class Solution {
     }
 };
 
+
 //{ Driver Code Starts.
 
 bool isZigzag(int arr[], int n){
