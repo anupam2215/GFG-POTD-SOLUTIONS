@@ -22,14 +22,14 @@ class Solution{
 
         // Calculate products of elements to the left of each index
         long long int leftProduct = 1;
-        for (int i = 1; i < n; ++i) {
+        for (int i = 1; i < n; i++) {
             leftProduct *= nums[i - 1];
             leftProducts[i] = leftProduct;
         }
 
         // Calculate products of elements to the right of each index
         long long int rightProduct = 1;
-        for (int i = n - 2; i >= 0; --i) {
+        for (int i = n - 2; i >= 0; i--) {
             rightProduct *= nums[i + 1];
             rightProducts[i] = rightProduct;
         }
