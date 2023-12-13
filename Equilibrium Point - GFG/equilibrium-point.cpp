@@ -12,27 +12,26 @@ class Solution{
     int equilibriumPoint(long long a[], int n) {
     
         // Your code here
-        long long totalsum =0 ; long long leftsum=0;
         
-        for(int i =0 ; i <n ;i++){
-            totalsum+=a[i];
+        
+        long long sum=0;
+        long long fsum=0;
+        
+        for(int i=0;i<n;i++){
+            sum+=a[i];
         }
-        
-        for(int i=0 ; i<n ;i++){
-            totalsum-=a[i];
+        for(int i=0;i<n;i++){
+            sum-=a[i];
             
-            if(leftsum==totalsum)
-            return i+1;
+            if(fsum==sum)return i+1;
+                
             
-            leftsum+=a[i];
-            
+            fsum=fsum+a[i];
         }
-        
         return -1;
     }
 
 };
-
 
 //{ Driver Code Starts.
 
