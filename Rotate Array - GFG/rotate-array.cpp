@@ -6,14 +6,22 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
     public:
+    void rotate(int arr[],int start,int end){
+        while(start<end){
+            swap(arr[start],arr[end]);
+            start++;
+            end--;
+        }
+    }
     
     //Function to rotate an array by d elements in counter-clockwise direction. 
     void rotateArr(int arr[], int d, int n){
         // code here
-         d= d%n; // ye use kre taaki d k range me rhe
-        reverse(arr,arr+d); // ye array ko reverse krega d tk eg [2, 1 , 3 , 4 , 5]
-        reverse(arr+d,arr+n); // ye reverse kerga d se pura last tk eg . [2,1 , 5 , 4 , 3]
-        reverse(arr,arr+n);// or ye current aaray ko reverse kr dega [3,4,5,2,1]
+        d = d % n;
+        
+        rotate(arr,0,d-1);
+        rotate(arr,d,n-1);
+        rotate(arr,0,n-1);
     }
 };
 
