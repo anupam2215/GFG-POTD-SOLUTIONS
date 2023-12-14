@@ -23,13 +23,13 @@ class Solution{
         }
         
         // second step
-        for(int i=k; i<=r ;i++){
+        for(int i=k;i<=r;i++){
             if(arr[i]<pq.top()){
                 pq.pop();
                 pq.push(arr[i]);
             }
         }
-        int ans = pq.top();
+        int ans=pq.top();
         return ans;
     }
 };
