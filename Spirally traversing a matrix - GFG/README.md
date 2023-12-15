@@ -13,7 +13,7 @@ matrix[][] = {{1, 2, 3, 4},
 <strong>Output</strong>: 
 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
 <strong>Explanation</strong>:
-</span><img alt="" src="https://www.geeksforgeeks.org/wp-content/uploads/spiral-matrix.png" style="height:242px; width:400px"></pre>
+</span><img alt="" src="https://www.geeksforgeeks.org/wp-content/uploads/spiral-matrix.png" style="height:242px; width:400px" data-evernote-lazy-src="https://www.geeksforgeeks.org/wp-content/uploads/spiral-matrix.png"></pre>
 
 <p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
 
