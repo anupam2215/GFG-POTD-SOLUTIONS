@@ -10,6 +10,7 @@ using namespace std;
 class Solution {
   int checkpali(int n)
     {
+       
         int r=0;
         while(n>0){
             int p=n%10;
