@@ -12,7 +12,8 @@ class Solution
         // code here 
         vector<int> ans;
         
-        int i , k=0 , l=0; // k-starting row,r-ending row , c-ending col , l-starting col , i - iterator  
+        int i , k=0 , l=0; // k-starting row,r-ending row , c-ending col 
+        // , l-starting col , i - iterator  
         
         while(k<r && l<c){
             
