@@ -41,10 +41,13 @@ public:
             ans=min(ans,bb);
         }
         return ans;
+        
+
         }
         
     
 };
+
 
 
 //{ Driver Code Starts.
