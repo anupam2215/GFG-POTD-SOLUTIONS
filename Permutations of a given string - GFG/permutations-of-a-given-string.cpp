@@ -6,29 +6,49 @@ using namespace std;
 class Solution
 {
 	public:
-	void solve(string& S, set<string>& perms, int ind) {
-        if (ind == S.size()) {
+// 	void solve(string& S, set<string>& perms, int ind) {
+//         if (ind == S.size()) {
+//             perms.insert(S);
+//             return;
+//         }
+//         for (int i = ind; i < S.size(); i++) {
+//             swap(S[ind], S[i]);
+//             solve(S, perms, ind + 1);
+//             swap(S[ind], S[i]);
+//         }
+//     }
+
+    void solve(string& S, set<string>& perms , int ind){
+        if(ind==S.size()){
             perms.insert(S);
             return;
         }
-        for (int i = ind; i < S.size(); i++) {
-            swap(S[ind], S[i]);
-            solve(S, perms, ind + 1);
-            swap(S[ind], S[i]);
+        
+        for(int i=ind;i<S.size();i++){
+            swap(S[ind],S[i]);
+            solve(S,perms,ind+1);
+            swap(S[ind],S[i]);
         }
     }
 		vector<string>find_permutation(string S)
 		{
 		    // Code here there
-		set<string> perms;
-        int ind = 0;
-        solve(S, perms, ind);
+// 		set<string> perms;
+//         int ind = 0;
+//         solve(S, perms, ind);
         
-        // Convert set to vector
-        vector<string> ans(perms.begin(), perms.end());
+//         // Convert set to vector
+//         vector<string> ans(perms.begin(), perms.end());
+//         return ans;
+
+        set<string>perms;
+        int ind=0;
+        solve(S,perms,ind);
+        vector<string> ans(perms.begin(),perms.end());
         return ans;
 		}
 };
+
 
 
 
